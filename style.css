@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: auto; */
+}
+
+:root{
+   
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright--Yellow: hsl(71, 73%, 54%);
+    --Light--Gray: hsl(204, 43%, 93%);
+    --Grayish--Blue: hsl(218, 22%, 67%);
+    --Grayish--Blue2: hsl(221, 30%, 73%);
+    
+
+
+}
+
+body{
+    font-family: 'Karla';
+    max-width: 375px;
+    height: max-content;
+    margin: 80px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--Light--Gray);
+    
+    
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    max-height: max-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(fill,minmax(180px,1fr));
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.108);
+}
+.container_section{
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    
+}
+.section1{
+    background-color: #fff;
+    
+}
+.section2{
+    background-color: var(--Cyan);
+    color: var(--Light--Gray);
+}
+.cta{
+    padding: .7rem;
+    text-align: center;
+    color: #fff;
+    background: var(--Bright--Yellow);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+}
+.section3{
+    background-color: var(--Grayish--Blue2);
+}
+.section__title{
+    color: var(--Light--Gray);
+    font-size: 1.2rem;
+}
+.section__title--color{
+    color: var(--Cyan);
+}
+.section__subtitle{
+   color: var(--Bright--Yellow);
+   font-size: .95rem;
+}
+.section__paragraph{
+    color: var(--Light--Gray);
+    font-size: .9rem;
+    line-height: 1.5rem;
+}
+.section__paragraph--color{
+    color: var(--Cyan);
+    letter-spacing: .4px;
+}
+.section__lista{
+    list-style: none;
+    color: var(--Light--Gray);
+    line-height: 1.3rem;
+}
+.precios{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.section__precio{
+    font-size: 2rem;
+}
+.span{
+    color: var(--Grayish--Blue2);
+    font-size: .9rem;
+}
+
+@media (min-width:768px) {
+    body{
+        height: 100vh;
+        max-width: 700px;
+        margin: auto;
+    }
+    .container{
+        grid-template-columns: 1fr 1fr;
+        
+        
+    }
+    .section1{
+        grid-column: 1/-1;
+        
+
+    }
+    .container_section{
+        padding: 2.7rem;
+    }
+}
